@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preload {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#77b3d4, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 3.5s ease;
+    z-index: 99999;
+}
+
+.city,
+.city2,
+.city3 {
+    height: 150px;
+    position: absolute;
+}
+
+.city {
+    bottom: 2;
+}
+
+.city2 {
+    bottom: 2;
+    right: 2;
+}
+
+.city3 {
+    bottom: 2;
+    left: 2;
+}
+
+.hero {
+    height: 400px;
+    animation: hero 3s ease infinite;
+}
+
+.preload h3 {
+    position: absolute;
+    top: 75%;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes hero {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-600px);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero {
+        height: 400px;
+        animation: hero 3s ease infinite;
+    }
+
+    .preload h3 {
+        position: absolute;
+        top: 75%;
+        left: 15%;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
